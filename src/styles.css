@@ -1,0 +1,207 @@
+/* Global styles for Orca Bitcoin Application */
+:root {
+  --primary-dark: #121212;
+  --secondary-dark: #1e1e1e;
+  --accent-primary: #0070f3;
+  --accent-secondary: #00ff95;
+  --accent-warning: #ffb800;
+  --accent-danger: #ff4757;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --card-bg: rgba(30, 30, 30, 0.7);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --gradient-primary: linear-gradient(135deg, #0070f3, #00ff95);
+  --gradient-secondary: linear-gradient(135deg, #7928ca, #ff0080);
+  --gradient-background: linear-gradient(
+    to bottom right,
+    #121212,
+    #232323,
+    #121212
+  );
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--gradient-background);
+  color: var(--text-primary);
+}
+
+#root,
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-theme {
+  --primary-dark: #121212;
+  --secondary-dark: #1e1e1e;
+  --card-bg: rgba(30, 30, 30, 0.7);
+}
+
+.light-theme {
+  --primary-dark: #f5f5f5;
+  --secondary-dark: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --gradient-background: linear-gradient(
+    to bottom right,
+    #f5f5f5,
+    #e0e0e0,
+    #f5f5f5
+  );
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  padding-left: 280px;
+  overflow-y: auto;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background-color: var(--secondary-dark);
+  border-right: 1px solid var(--border-color);
+  z-index: 100;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 260px;
+  height: 70px;
+  background-color: var(--secondary-dark);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 99;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--gradient-secondary);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+input,
+select,
+textarea {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    padding: 20px 0;
+  }
+
+  .header {
+    left: 70px;
+  }
+
+  .main-content {
+    padding-left: 90px;
+  }
+
+  .sidebar-text {
+    display: none;
+  }
+}
