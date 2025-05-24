@@ -1,6 +1,11 @@
 
 <h1>ORCA: The Ultimate Bitcoin & Web3 Ecosystem</h1>
 
+<h2>ORCA: Your all-in-one Bitcoin powerhouse - manage, stake, trade, pay bills, run Lightning nodes, and train AI models in a censorship-resistant ecosystem built for the web3 future.</h2>
+
+https://github.com/user-attachments/assets/e71d1cbb-a276-46c4-88fe-08269eb2903f
+
+
 <h2>The Current Financial Landscape: Problems & Challenges</h2>
 
 <ul class="point-list problem">
