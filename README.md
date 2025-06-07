@@ -5,7 +5,6 @@
 
 https://github.com/user-attachments/assets/e71d1cbb-a276-46c4-88fe-08269eb2903f
 
-
 <h2>The Current Financial Landscape: Problems & Challenges</h2>
 
 <ul class="point-list problem">
